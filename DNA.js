@@ -1,27 +1,26 @@
-class DNA {
-    constructor(genes) {
-      if (genes) {
-        this.genes = genes;
-      } else {
-        this.genes = [];
-        for (let i = 0; i < lifespan; i++) {
-          this.genes[i] = p5.Vector.random2D();
-          this.genes[i].setMag(0.1);
-        }
-      }
-    }
-  
-    crossover(partner) {
-      const newgenes = new DNA();
-      const mid = floor(random(this.genes.length));
-      for (let i = 0; i < this.genes.length; i++) {
-        if (i > mid) {
-          newgenes.genes[i] = this.genes[i];
-        } else {
-          newgenes.genes[i] = partner.genes[i];
-        }
-      }
-      return new DNA(newgenes.genes);
-    }
+function DNA(genes){
+  if(genes){
+      this.genes=genes;
+  }else{
+      this.genes=[];
   }
-  
+  for(var i = 0;i<lifespan;i++){
+    this.genes[i] = p5.Vector.random2D();
+    this.genes[i].setMag(0.1);
+  }
+
+
+  this.crossover = function(partner){ //method - pick midpoint in length of the array and get half genes/genes
+      var newgenes = new DNA(); //make random genes
+      var mid = floor(random(this.genes.length));
+      for(var i = 0; i<this.genes.length;i++){
+          if(i>mid){
+              newgenes[i] = this.genes[i];
+          } else{
+              newgenes[i] = partner.genes[i]; //overwrite
+          }
+          
+      }
+      return new DNA(newgenes); //return new dna with new genes
+  }
+}

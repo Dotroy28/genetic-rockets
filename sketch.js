@@ -1,5 +1,5 @@
 var population;
-var lifespan =200;
+var lifespan = 200;
 var lifeP;
 var count= 0;
 var target;
@@ -23,7 +23,6 @@ function draw(){
         population.selection();
         count = 0; // Reset count to restart the simulation
     }
-
 
     ellipse(target.x,target.y,16,16);
 }
