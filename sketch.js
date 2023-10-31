@@ -31,7 +31,7 @@ function draw(){
     }
 
     fill(255);
-    rect(100,150,200,10);
+    rect(rx,ry,rw,rh);
 
     ellipse(target.x,target.y,16,16);
 }
