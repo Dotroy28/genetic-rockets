@@ -6,7 +6,7 @@ function DNA(genes){
   }
   for(var i = 0;i<lifespan;i++){
     this.genes[i] = p5.Vector.random2D();
-    this.genes[i].setMag(0.1);
+    this.genes[i].setMag(maxforce);
   }
 
 
@@ -23,4 +23,14 @@ function DNA(genes){
       }
       return new DNA(newgenes); //return new dna with new genes
   }
+
+  this.mutation = function(){
+    for(var i = 0;i<genes.length;i++){
+        if(random(1)<0.01){
+            this.genes[i]=p5.Vector.random2D();
+            this.genes[i].setMag(maxforce);
+        }
+    }
+  }
+
 }

@@ -16,7 +16,6 @@ function Population(){
               maxfit= this.rockets[i].fitness;
           }
       }
-      createP(maxfit);
 
       for(var i =0;i<this.popsize;i++){
           this.rockets[i].fitness /= maxfit; //normalize it
@@ -38,6 +37,7 @@ function Population(){
           var parentA = random(this.matingpool).dna; //give random element from the array (feature in p5?)
           var parentB = random(this.matingpool).dna;
           var child = parentA.crossover(parentB);
+          child.mutation();
           newRockets[i]=new Rocket(child);
           }
           this.rockets = newRockets;
