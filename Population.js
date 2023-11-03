@@ -7,6 +7,15 @@ function Population(){
       this.rockets[i] = new Rocket();
   }
 
+  this.allRocketsCrashed = function() { //check if rockets have crashed
+    for (var i = 0; i < this.rockets.length; i++) {
+        if (!this.rockets[i].crashed) {
+            return false;
+        }
+    }
+    return true;
+}
+
   this.evaluate = function(){
 
       var maxfit=0;

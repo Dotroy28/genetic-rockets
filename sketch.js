@@ -24,7 +24,7 @@ function draw(){
     lifeP.html(count);
 
     count++;
-    if (count == lifespan) {
+    if (count >= lifespan || population.allRocketsCrashed()) {
         population.evaluate();
         population.selection();
         count = 0; // Reset count to restart the simulation
