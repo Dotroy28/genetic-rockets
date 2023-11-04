@@ -3,7 +3,7 @@ var lifespan = 400;
 var lifeP;
 var count= 0;
 var target;
-var maxforce = 0.2;
+var maxforce = 1;
 
 var rx = 100;
 var ry=150;

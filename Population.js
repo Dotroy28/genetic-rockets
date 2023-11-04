@@ -9,7 +9,7 @@ function Population(){
 
   this.allRocketsCrashed = function() { //check if rockets have crashed
     for (var i = 0; i < this.rockets.length; i++) {
-        if (!this.rockets[i].crashed) {
+        if (!this.rockets[i].crashed && !this.rockets[i].completed) {
             return false;
         }
     }
