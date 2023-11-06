@@ -14,7 +14,16 @@ function Population(){
         }
     }
     return true;
-}
+  }
+
+//   this.rocketComplete = function(){
+//     for (var i = 0; i < this.rockets.length; i++) {
+//         if (this.rockets[i].completed) {
+//             return true;
+//         }
+//     }
+//     return false;
+//   }
 
   this.evaluate = function(){
 

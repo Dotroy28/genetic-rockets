@@ -18,16 +18,20 @@ function setup(){
     population = new Population();
     lifeP = createP();
     generationCount=createP();
+    firstGeneration =createP();
     target = createVector(width/2,50);
 }
 
 function draw(){
     background(0);
     population.run();
-    lifeP.html(count);
-    generationCount.html(generation);
+    lifeP.html("Timer: "+count);
+    generationCount.html("Generation: "+generation);
 
     count++;
+
+    
+    
     if (count >= lifespan || population.allRocketsCrashed()) {
         population.evaluate();
         population.selection();
@@ -39,4 +43,8 @@ function draw(){
     rect(rx,ry,rw,rh);
 
     ellipse(target.x,target.y,16,16);
+
+    // if(population.rocketComplete()){
+    //     firstGeneration.html("Generations to reach target: "+generation);
+    // }
 }
