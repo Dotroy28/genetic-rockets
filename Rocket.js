@@ -29,6 +29,10 @@ function Rocket(dna){
 
   }
 
+  this.fitnessTime = function(){
+    
+  }
+
   this.update = function(){
     var d = dist(this.pos.x,this.pos.y,target.x,target.y);
       if(d<10){
