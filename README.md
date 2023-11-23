@@ -1,2 +1,2 @@
 # genetic-rockets
-Implementing an algorithm in which "rockets" try to locate a specified point through learning attempts.
+Implementing a JavaScript-based algorithm in which "rockets" try to locate a specified point through continous attempts.
