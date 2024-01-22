@@ -14,6 +14,7 @@ var rh=10;
 
 function setup(){
     createCanvas(400,300);
+    
     rocket = new Rocket();
     population = new Population();
     lifeP = createP();
@@ -25,8 +26,8 @@ function setup(){
 function draw(){
     background(0);
     population.run();
-    lifeP.html("Timer: "+count);
-    generationCount.html("Generation: "+generation);
+    //lifeP.html("Timer: "+count);
+    //generationCount.html("Generation: "+generation);
 
     count++;
 
